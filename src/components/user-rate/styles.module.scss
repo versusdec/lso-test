@@ -1,0 +1,73 @@
+@import "../../styles/variables";
+
+.rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: $color-background;
+  padding: 0 6px 0 5px;
+  border-radius: 17px;
+  font-size: 12px;
+  font-weight: 700;
+  overflow: hidden;
+  position: relative;
+
+  * {
+    z-index: 1;
+  }
+
+  .bg {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 45px;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#DC4A19), to(#FCC539));
+    background: -o-linear-gradient(left, #DC4A19 0%, #FCC539 100%);
+    background: linear-gradient(90deg, #DC4A19 0%, #FCC539 100%);
+  }
+
+  .note {
+    padding: 0 6px;
+    height: 100%;
+    line-height: 35px;
+    border-right: 1px solid rgba(#fff, 0.2);
+    color: #fff;
+  }
+
+  .r {
+    padding: 0 6px;
+    height: 100%;
+    line-height: 35px;
+    cursor: pointer;
+
+    &._r {
+      color: #fff;
+    }
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(#fff, 0.2);
+    }
+  }
+}
+
+[data-theme=dark] {
+  .rate {
+    background-color: #183a5d;
+  }
+
+  .r {
+    color: white;
+  }
+}

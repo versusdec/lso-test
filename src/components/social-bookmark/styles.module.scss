@@ -1,0 +1,53 @@
+@import "../../styles/variables";
+
+.book {
+  position: fixed;
+  left: 0;
+  top: 286px;
+  z-index: 12;
+
+  a {
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    &:first-child {
+      border-top-right-radius: 4px;
+      background-color: #3A579A;
+    }
+
+    &:nth-child(2) {
+      background-color: #00ABF0;
+    }
+
+    &:nth-child(3) {
+      background-color: #24A2E0;
+    }
+
+    &:nth-child(4) {
+      background-color: #CD1C1F;
+    }
+
+    &:nth-child(5) {
+      background-color: #FC461E;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 4px;
+      background-color: #F95149;
+    }
+
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

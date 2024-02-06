@@ -1,0 +1,18 @@
+.rating {
+  width: 86px;
+  height: 85px;
+  position: relative;
+  border-radius: 100%;
+  color: white;
+  font-size:30px;
+  font-weight: 900;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background-color: #0E1219;
+    border-radius: inherit;
+    z-index: -1;
+  }
+}

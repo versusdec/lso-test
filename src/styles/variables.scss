@@ -1,0 +1,34 @@
+$color-main: #2A86E5;
+$color-secondary: #F9B936;
+$color-background: #FCFCFC;
+$color-background-dark: #0E1219;
+$color-linear-start: #0DD0BA;
+$color-linear-end: #2A86E5;
+$color-grey: #444;
+$color-text: #707070;
+$color-text-dark: #fff;
+$color-card-bg: #fff;
+$color-card-bg-dark: #202434;
+$screen_mobile: 767px;
+$screen_tablet: 1024px;
+$container-padding: 20px;
+$container-width: calc(1170px + #{$container-padding} + #{$container-padding});
+
+@mixin mobile {
+  @media screen and (max-width: $screen_mobile) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $screen_tablet) {
+    @content
+  }
+}
+
+@mixin mobile-title {
+  @include mobile {
+    font-size: 70px;
+    line-height: unset;
+  }
+}
